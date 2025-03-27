@@ -1,59 +1,51 @@
-# Getting started with your app
+# Primeiros Passos com a Aplicação
 
-## Available Scripts
+## Scripts Disponíveis
 
-In the project directory you can run:
+No diretório do projeto, você pode executar:
 
 ### `npm start`
 
-Runs the app in the development mode.
-By default, it is accessible at http://localhost:3000
+Inicia a aplicação em modo de desenvolvimento.<br>
+Por padrão, estará acessível em: [http://localhost:3000](http://localhost:3000)
 
 ### `npm test`
 
-Launches the test runner.
+Executa o test runner (executador de testes).
 
 ### `npm run build`
 
-Builds the app for production to the `dist` folder.
+Compila a aplicação para produção na pasta `dist`.<br>
+A versão é minificada e os nomes dos arquivos incluem hashes.<br>
+Sua aplicação está pronta para ser implantada!
 
-The build is minified and the filenames include the hashes.
-Your app is ready to be deployed!
+## Desenvolvimento
 
-## Development
+**Pré-requisitos:**  
+Certifique-se de ter o Node.js 14, npm e Docker instalados.
 
-Make sure you have Node.js 14, npm, and Docker installed.
-
-- Instal Yarn
-```
+1. **Instalar o Yarn**
+```bash
 npm install -g yarn
-```
 
-- Install dependencies
+2. **Instalar dependências**
+```bash
+npm install -g yarn
 
-```
-yarn install
-```
-
-- Generate Prisma client
-
-```
+3. **Gerar o cliente do Prisma**
+```bash
 npm run prisma:generate
-```
 
-- Start database in Docker
+4. **Iniciar o banco de dados no Docker**
+```bash
+npm run docker:db
 
-```
-```
-
-- Initiate the database
-
-```
+5. **Inicializar o banco de dados**
+```bash
 npm run db:init
-```
 
-- Start the server
+6. **Iniciar o servidor**
+```bash
+npm start
 
-```
-yarn start
-```
+
