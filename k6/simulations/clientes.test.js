@@ -1,8 +1,7 @@
-import http from "k6/http";
-import { group, sleep } from "k6";
+import { group } from "k6";
 import data from "../data/usuarios.json";
 import Login from "../request/login.request";
-import User from "../request/user.request";
+import Customers from "../request/customers.request";
 
 export const options = {
   stages: [
@@ -11,17 +10,18 @@ export const options = {
     { duration: "10s", target: 10 },
     { duration: "5s", target: 0 },
   ],
+  thresholds: {
+    http_req_duration: ["p(99) < 1000"],
+  },
 };
 
 export default function () {
-  let login = new Login();
-  let user = new User();
+  const login = new Login();
+  const customers = new Customers();
 
-  group("Login e get token", () => {
+  group("Login e listar clientes", () => {
     login.access(data.usuario_ok.user, data.usuario_ok.pass);
-  });
-
-  group("List users", () => {
-    user.list(login.getToken());
+    const token = login.getToken();
+    customers.list(token);
   });
 }

@@ -3,9 +3,9 @@
   "version": "1.0.0",
   "description": "Testes de performance para endpoints de Produtos e Clientes da API EBAC Demo Store Server utilizando k6 (atividade do módulo QA)",
   "main": "index.js",
-  "scripts": {
+ "scripts": {
     "pretest": "webpack",
-    "test": "k6 run dist/user.test.js"
+    "test": "k6 run dist/clientes.test.js && k6 run dist/produtos.test.js"
   },
   "author": "Leonardo Martins",
   "license": "ISC",

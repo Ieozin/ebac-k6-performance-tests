@@ -1,16 +1,16 @@
 require("dotenv").config();
-
 const path = require("path");
 
 module.exports = {
   mode: process.env.NODE_ENV,
-  entry: {
-    user: "./simulations/user.test.js",
+  entry: { 
+    clientes: "./simulations/clientes.test.js",
+    produtos: "./simulations/produtos.test.js"
   },
   output: {
-    path: path.resolve(__dirname, "dist"), // eslint-disable-line
+    path: path.resolve(__dirname, "dist"),
     libraryTarget: "commonjs",
-    filename: "[name].test.js",
+    filename: "[name].test.js", 
   },
   module: {
     rules: [{ test: /\.js$/, use: "babel-loader" }],
