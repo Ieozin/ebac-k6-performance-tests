@@ -1,0 +1,18 @@
+# Dependências
+node_modules/
+dist/
+
+# Ambiente
+.env
+.env.local
+
+# Logs
+*.log
+npm-debug.log*
+
+# k6
+data/usuarios.json # Se contiver dados sensíveis
+
+# Docker
+docker-compose.yml
+/db-data/
