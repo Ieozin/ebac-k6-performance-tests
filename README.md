@@ -41,12 +41,6 @@ npm test
 │   └── utils/       # Utilitários
 └── README.md
 ```
-
-## 📊 Resultados Esperados
-- Testes executando em 4 estágios de carga
-- Threshold de p(99) < 1000ms
-- Relatório completo no terminal
-
 ## ⁉️ Suporte
 Em caso de problemas, verifique:
 - API rodando em http://localhost:3000
