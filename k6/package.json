@@ -1,0 +1,24 @@
+{
+  "name": "k6-ebac-testes",
+  "version": "1.0.0",
+  "description": "Testes de performance para endpoints de Produtos e Clientes da API EBAC Demo Store Server utilizando k6 (atividade do módulo QA)",
+  "main": "index.js",
+  "scripts": {
+    "pretest": "webpack",
+    "test": "k6 run dist/user.test.js"
+  },
+  "author": "Leonardo Martins",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/core": "^7.26.10",
+    "@babel/preset-env": "^7.26.9",
+    "@types/k6": "^1.0.2",
+    "babel-loader": "^10.0.0",
+    "core-js": "^3.41.0",
+    "webpack": "^5.98.0",
+    "webpack-cli": "^6.0.1"
+  },
+  "dependencies": {
+    "dotenv": "^16.4.7"
+  }
+}
